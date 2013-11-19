@@ -17,7 +17,7 @@
                    withBottomRightRadius:(CGFloat)bottomRight {
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate( NULL, rect.size.width, rect.size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGContextRef context = CGBitmapContextCreate( NULL, rect.size.width, rect.size.height, 8, 0, colorSpace, kCGBitmapAlphaInfoMask &  kCGImageAlphaPremultipliedLast);
     
     if ( context == NULL ) {
         return NULL;
